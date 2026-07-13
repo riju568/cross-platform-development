@@ -996,3 +996,25 @@ class PhysicsToken extends CircleComponent with TapCallbacks {
     onCollected();
   }
 }
+
+/*
+----- pubspec.yaml -------
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase dependencies
+  firebase_core: ^3.0.0
+  firebase_auth: ^5.0.0
+  cloud_firestore: ^5.0.0
+
+  # Flame Game Engine
+  flame: ^1.18.0
+-------- latest compatible versions of all the packages -----------
+flutter pub add firebase_core firebase_auth cloud_firestore flame
+-------------------------------------------------------------------
+
+
+*/
+
+
