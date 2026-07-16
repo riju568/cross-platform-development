@@ -153,6 +153,7 @@ class ButtonDef {
     tp = TextPainter(text: TextSpan(text: label, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)), textDirection: TextDirection.ltr)..layout();
   }
 }
+/*
 -------------------------pubspec.yaml--------------------------
 name: calculator_app
 description: "A scientific calculator."
@@ -177,3 +178,5 @@ flutter:
   uses-material-design: true
 
 -----------------------------------------------------------
+
+*/
