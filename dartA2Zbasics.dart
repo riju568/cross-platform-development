@@ -90,7 +90,14 @@ void main() {
   num13 += 1;
   num13 -= 1;
   print(num13);
-
+    //logical && logical || // and or
+  if(num14>200 && num<203){
+    print('200 to 203');
+    //!= Not Equal
+    if(num15 != 100){
+      PRINT('Num is not equal to 100');
+    }
+  }
   
 
 }
