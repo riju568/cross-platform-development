@@ -3,8 +3,6 @@
 
 import 'dart:io';
 
-
-
 class Num {
   int num = 10;
 }
@@ -12,19 +10,18 @@ class Num {
 int notEqual() {
   var n = Num();
   int number220;
-  number220 = n.num ?? 0;
+  number220 = n.num; // Removed ?? 0 as n.num is not nullable
   print(number220);
   return 0;
 }
 
 void main() {
-
   print("Hello World");
   var firstName = 'Mahmud';
   String lastName = 'A';
 
   print(firstName + ' ' + lastName);
-  print(firstName + ' ' + lastName); 
+  print(firstName + ' ' + lastName);
 
   stdout.writeln("What is your name?");
 
@@ -32,7 +29,7 @@ void main() {
   int amount2 = 200;
   print('amount1: $amount1 | Amount2: $amount2');
 
-  double dAmount1 = 100.11; 
+  double dAmount1 = 100.11;
   var dAmount2 = 200.22;
   print('dAmount1: $dAmount1, dAmount2: $dAmount2');
   String name1 = 'Mahmid';
@@ -107,30 +104,26 @@ void main() {
   num13 += 1;
   num13 -= 1;
   print(num13);
-    //logical && logical || // and or
-  if(num14>200 && num<203){
+  
+  // Declaring missing variables for logic checks
+  int num14 = 210;
+  int num15 = 50;
+  int num = 150; 
+  int num16 = 50;
+
+  // logical && logical || // and or
+  if (num14 > 200 && num < 203) {
     print('200 to 203');
-    //!= Not Equal
-    if(num15 != 100){
-      PRINT('Num is not equal to 100');
+    // != Not Equal
+    if (num15 != 100) {
+      print('Num is not equal to 100');
     }
   }
-  
 
-}
-// != not Equal
-if num16!= 100{
-  print('num is not equal to 100');
-
-
-   var n = Num();
-  int number220;
-  number220 = n.num ?? 0;
-  print(number220);
-  return 0;
-}
-
-void main() {
+  // != not Equal (Fixed syntax from original snippet)
+  if (num16 != 100) {
+    print('num is not equal to 100');
+  }
   notEqual();
 
   // Null Aware Operator
@@ -161,7 +154,7 @@ void main() {
 
   // Switch Statement
   int number134 = 0;
-  switch (number134) { 
+  switch (number134) {
     case 0:
       print('Even');
       break;
@@ -174,7 +167,7 @@ void main() {
 
   // For-in Loop
   var number146 = [1, 2, 3];
-  for (var n in number146) { 
+  for (var n in number146) {
     print(n);
   }
 
@@ -193,9 +186,9 @@ void main() {
 
   for (var i = 0; i < 10; ++i) {
     if (i % 2 == 0) continue; // Inside the loop
-    print("odd: $i"); 
+    print("odd: $i");
   }
-}
+
   // List
   List<String> names149 = ['Jack', 'jaill'];
   print(names149);
@@ -203,10 +196,10 @@ void main() {
     print(n);
   }
 
-  // Collection 
+  // Collection
   List<String> name151 = ['hello', 'Fiends'];
   // Create a new list
-  var names152 = [...name151]; 
+  var names152 = [...name151];
   names152[1] = 'Mark';
   for (var n in names152) {
     print(n);
@@ -214,11 +207,10 @@ void main() {
 
   // Map
   // Use Map<KeyType, ValueType>() constructor or literal
-  var gift221 = <String, String>{}; 
+  var gift221 = <String, String>{};
   print(gift221);
   gift221['first'] = 'Mego';
-  print(gift221['first']); 
+  print(gift221['first']);
   var gift222 = {'first': 'Mango', 'second': 'Jack Friend'};
   print(gift222['second']);
 }
-
