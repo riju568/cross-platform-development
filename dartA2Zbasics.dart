@@ -1,3 +1,6 @@
+// https://docs.flutter.dev/install/custom --> SDK with code editor and IDE
+// https://youtu.be/Ej_Pcr4uC2Q --> complete tutorial
+
 import 'dart:io';
 
 void main() {
@@ -101,4 +104,7 @@ void main() {
   
 
 }
-
+// != not Equal
+if num16!= 100{
+  print('num is not equal to 100');
+}
