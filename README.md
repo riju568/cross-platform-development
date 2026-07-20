@@ -123,4 +123,7 @@ dark format.
 <br/>\# Execute static analysis over strict rulesets  
 flutter analyze
 <br/>\
-**10\. Please Note that all the files own by Tanmoy Samanta shared for education purpose only**
+**10\. Please Note that all the files own by Tanmoy Samanta & shared for education purpose only**
+<br/>\
+<br/>\
+<br/>\
