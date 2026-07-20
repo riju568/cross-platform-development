@@ -10,7 +10,7 @@ class Num {
 int notEqual() {
   var n = Num();
   int number220;
-  number220 = n.num; // Removed ?? 0 as n.num is not nullable
+  number220 = n.num;
   print(number220);
   return 0;
 }
@@ -32,9 +32,11 @@ void main() {
   double dAmount1 = 100.11;
   var dAmount2 = 200.22;
   print('dAmount1: $dAmount1, dAmount2: $dAmount2');
+  
   String name1 = 'Mahmid';
-  var name22 = 'Ahsan'; // Fixed: Typo 'mane22' -> 'name22'
+  var name22 = 'Ahsan';
   print('Names: $name1, $name22');
+  
   dynamic weakVariable = 100;
   print('weakVariable: $weakVariable\n');
   weakVariable = 'Dart programming';
@@ -78,10 +80,12 @@ void main() {
   print(aConstNum);
   print(aConstBool);
   print(aConstString);
+  
   // Use .runtimeType instead of .runtime
   print(aConstNum.runtimeType);
   print(aConstBool.runtimeType);
   print(aConstString.runtimeType);
+  
   int num12 = 0;
   print(num12);
 
@@ -93,7 +97,7 @@ void main() {
     print("num13 is 100");
   }
 
-  num13 *= 2; // num13 = num13 * 2;
+  num13 *= 2;
   print(num13);
 
   // Unary Operator
@@ -120,7 +124,7 @@ void main() {
     }
   }
 
-  // != not Equal (Fixed syntax from original snippet)
+  // != not Equal
   if (num16 != 100) {
     print('num is not equal to 100');
   }
@@ -180,7 +184,7 @@ void main() {
 
   // Break and Continue
   for (var i = 0; i < 10; ++i) {
-    if (i > 5) break; // Outof the loop
+    if (i > 5) break; // Out of the loop
     print(i);
   }
 
@@ -190,14 +194,14 @@ void main() {
   }
 
   // List
-  List<String> names149 = ['Jack', 'jaill'];
+  List<String> names149 = ['Jack', 'Jill'];
   print(names149);
   for (var n in names149) {
     print(n);
   }
 
   // Collection
-  List<String> name151 = ['hello', 'Fiends'];
+  List<String> name151 = ['hello', 'Friends'];
   // Create a new list
   var names152 = [...name151];
   names152[1] = 'Mark';
@@ -206,11 +210,54 @@ void main() {
   }
 
   // Map
-  // Use Map<KeyType, ValueType>() constructor or literal
   var gift221 = <String, String>{};
   print(gift221);
-  gift221['first'] = 'Mego';
+  gift221['first'] = 'Mango';
   print(gift221['first']);
   var gift222 = {'first': 'Mango', 'second': 'Jack Friend'};
   print(gift222['second']);
+
+  // Functions
+  void showOutput(dynamic msg) {
+    print(msg);
+  }
+
+  dynamic square(dynamic num) {
+    return num * num;
+  }
+
+  showOutput(square(2));
+
+  // Arrow Function => (Renamed slightly to prevent duplicate function name conflict in same scope)
+  dynamic squareArrow(dynamic num) => num * num;
+  showOutput(squareArrow(2));
+  showOutput(squareArrow(2.5));
+
+  // Collections - Set
+  var halogens = {'fluorine', 'chlorine', 'bromine'};
+  for (var x in halogens) {
+    print(x);
+  }
+
+  var halogen = <String>{};
+  print(halogen.runtimeType);
+  
+  Set<String> names = {};
+  print(names.runtimeType);
+
+  // Map literal
+  var gift = {'first': 'partridges', 'second': 'turtledoves'};
+  print(gift);
+
+  // List forEach
+  var list = ['apples', 'bananas', 'oranges'];
+  void printF(dynamic item) {
+    print(item);
+  }
+  list.forEach(printF);
+
+  // Functions with optional positional parameters
+  dynamic sum(dynamic num1, [dynamic num2]) => num1 + (num2 ?? 0);
+  print(sum(2, 2));
+  print(sum(2));
 }
